@@ -14,7 +14,7 @@
   },
   "Tokens": {
     "Key": "a;lkjasdf;lkajsd;flkjas ;dflkja sd",
-    "Issuer": "http://localhost:41138",
+    "Issuer": "http://localhost:55354",
     "Audience": "users"
   }
 }

@@ -60,5 +60,10 @@ namespace DutchPaint.Controllers
 
             return View(results.ToList());
         }
+
+        //public IActionResult Shop()
+        //{
+        //    return View();
+        //}
     }
 }
