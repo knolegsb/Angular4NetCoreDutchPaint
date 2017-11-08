@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DutchPaint", "DutchPaint\DutchPaint.csproj", "{1AB3277C-F953-4353-A818-BB210F398DCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AB3277C-F953-4353-A818-BB210F398DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AB3277C-F953-4353-A818-BB210F398DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AB3277C-F953-4353-A818-BB210F398DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AB3277C-F953-4353-A818-BB210F398DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65854BE5-8FDA-43B2-A9E7-7880F2813430}
+	EndGlobalSection
+EndGlobal
