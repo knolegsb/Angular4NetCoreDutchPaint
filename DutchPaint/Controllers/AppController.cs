@@ -54,7 +54,11 @@ namespace DutchPaint.Controllers
 
         public IActionResult Shop()
         {
-            return View();
+            var results = from p in _repository.GetAllProducts()
+                          orderby p.Category
+                          select p;
+
+            return View(results.ToList());
         }
     }
 }
