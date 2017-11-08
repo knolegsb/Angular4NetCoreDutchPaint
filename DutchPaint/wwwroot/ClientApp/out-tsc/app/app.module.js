@@ -6,7 +6,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { ShopComponent } from './shop/shop.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { LoginComponent } from './login/login.component';
+import { ProductListComponent } from './shop/productList.component';
+import { DataService } from './shared/dataService';
+var routes = [
+    { path: "", component: ShopComponent },
+    { path: "checkout", component: CheckoutComponent },
+    { path: "login", component: LoginComponent }
+];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -15,12 +28,22 @@ var AppModule = (function () {
 AppModule = __decorate([
     NgModule({
         declarations: [
-            AppComponent
+            AppComponent,
+            ShopComponent,
+            LoginComponent,
+            CheckoutComponent,
+            ProductListComponent
         ],
         imports: [
-            BrowserModule
+            BrowserModule,
+            HttpModule,
+            FormsModule,
+            RouterModule.forRoot(routes, {
+                useHash: true,
+                enableTracing: false // for Debugging of the Routes
+            })
         ],
-        providers: [],
+        providers: [DataService],
         bootstrap: [AppComponent]
     })
 ], AppModule);

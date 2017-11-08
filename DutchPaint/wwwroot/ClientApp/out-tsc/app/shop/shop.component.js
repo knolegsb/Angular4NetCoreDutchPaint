@@ -5,17 +5,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { Component } from '@angular/core';
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Dutch Paint';
+var ShopComponent = (function () {
+    function ShopComponent() {
+        this.title = "Weclome to Dutch Paint";
     }
-    return AppComponent;
+    return ShopComponent;
 }());
-AppComponent = __decorate([
+ShopComponent = __decorate([
     Component({
-        selector: 'the-shop',
-        templateUrl: './app.component.html'
+        selector: "the-shop",
+        templateUrl: "shop.component.html"
     })
-], AppComponent);
-export { AppComponent };
-//# sourceMappingURL=app.component.js.map
+], ShopComponent);
+export { ShopComponent };
+//# sourceMappingURL=shop.component.js.map
