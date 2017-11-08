@@ -14,6 +14,7 @@ import { ShopComponent } from './shop/shop.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { LoginComponent } from './login/login.component';
 import { ProductListComponent } from './shop/productList.component';
+import { CartComponent } from './shop/cart.component';
 import { DataService } from './shared/dataService';
 var routes = [
     { path: "", component: ShopComponent },
@@ -32,7 +33,8 @@ AppModule = __decorate([
             ShopComponent,
             LoginComponent,
             CheckoutComponent,
-            ProductListComponent
+            ProductListComponent,
+            CartComponent
         ],
         imports: [
             BrowserModule,

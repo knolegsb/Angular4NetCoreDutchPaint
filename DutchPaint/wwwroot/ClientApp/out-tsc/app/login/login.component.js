@@ -4,17 +4,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { Component } from '@angular/core';
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+import { Component } from "@angular/core";
+import { DataService } from "../shared/dataService";
+import { Router } from "@angular/router";
 var LoginComponent = (function () {
-    function LoginComponent() {
+    function LoginComponent(data, router) {
+        this.data = data;
+        this.router = router;
+        this.errorMessage = "";
+        this.creds = {
+            username: "",
+            password: ""
+        };
     }
+    LoginComponent.prototype.onLogin = function () {
+        var _this = this;
+        this.data.login(this.creds)
+            .subscribe(function (success) {
+            if (success) {
+                if (_this.data.order.items.length == 0) {
+                    _this.router.navigate([""]);
+                }
+                else {
+                    _this.router.navigate(["checkout"]);
+                }
+            }
+        }, function (err) { return _this.errorMessage = "Failed to login"; });
+    };
     return LoginComponent;
 }());
 LoginComponent = __decorate([
     Component({
         selector: "login",
         templateUrl: "login.component.html"
-    })
+    }),
+    __metadata("design:paramtypes", [DataService, Router])
 ], LoginComponent);
 export { LoginComponent };
 //# sourceMappingURL=login.component.js.map

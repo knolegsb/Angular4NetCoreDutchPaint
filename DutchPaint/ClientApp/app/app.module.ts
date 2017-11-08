@@ -9,6 +9,8 @@ import { ShopComponent } from './shop/shop.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { LoginComponent } from './login/login.component';
 import { ProductListComponent } from './shop/productList.component';
+import { CartComponent } from './shop/cart.component';
+
 
 import { DataService } from './shared/dataService';
 
@@ -24,7 +26,8 @@ let routes = [
       ShopComponent,
       LoginComponent,
       CheckoutComponent,
-      ProductListComponent
+      ProductListComponent,
+      CartComponent
   ],
   imports: [
       BrowserModule,
