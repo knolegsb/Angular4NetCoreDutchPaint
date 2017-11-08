@@ -1,7 +1,15 @@
 ﻿@model IEnumerable<Product>
 
+@section Scripts {
+    <script src="~/ClientApp/dist/inline.bundle.js"></script>
+    <script src="~/ClientApp/dist/polyfills.bundle.js"></script>
+    <script src="~/ClientApp/dist/styles.bundle.js"></script>
+    <script src="~/ClientApp/dist/vendor.bundle.js"></script>
+}
+
 <h1>Shop</h1>
-<p>Count: @Model.Count()</p>
+
+@*<p>Count: @Model.Count()</p>
 @foreach(var p in Model)
 {
     <div class="col-md-3">
@@ -17,5 +25,6 @@
             <button id="buyButton">Buy</button>
         </div>
     </div>
-}
+}*@
 
+<the-shop></the-shop>

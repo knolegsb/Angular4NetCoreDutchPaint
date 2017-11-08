@@ -2,7 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\app\app.component.spec.ts" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.1.1" />

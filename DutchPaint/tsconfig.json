@@ -1,3 +1,31 @@
+//{
+//  "compileOnSave": false,
+//  "include": [
+//    "./ClientApp",
+//    "./wwwroot/ts"
+//  ],
+//  "compilerOptions": {
+//    "outDir": "./wwwroot/clientapp/out-tsc",
+//    "module": "es2015",
+//    "sourceMap": true,
+//    "declaration": false,
+//    "noImplicitAny": false,
+//    "moduleResolution": "node",
+//    "emitDecoratorMetadata": true,
+//    "experimentalDecorators": true,
+//    "skipDefaultLibCheck": true,
+//    "skipLibCheck": true,
+//    "target": "es5",
+//    "typeRoots": [
+//      "node_modules/@types"
+//    ],
+//    "lib": [
+//      "es6",
+//      "dom"
+//    ]
+//  }
+//}
+
 {
   "compileOnSave": false,
   "include": [
@@ -6,18 +34,19 @@
   ],
   "compilerOptions": {
     "outDir": "./wwwroot/clientapp/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
+    "module": "es2015",
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ]
-  }
+    "sourceMap": true,
+    "noImplicitAny": false, // for fixing lodach declaration
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true, // Workaround for https://github.com/angular/angular/issues/17863. Remove this if you upgrade to a fixed version of Angular.
+    "strict": true,
+    "lib": [ "es6", "dom" ]
+    //"types": [ "webpack-env" ]
+  },
+  "exclude": [ "bin", "node_modules" ],
+  "atom": { "rewriteTsconfig": false }
 }
